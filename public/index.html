@@ -4,7 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>QTalk</title>
     <link rel="stylesheet" href="css/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -12,15 +13,19 @@
 </head>
 
 <body>
-    <div></div>
     <div id="join__screen">
         <form id="join__form" action="">
-            ニックネーム : <input type="text" id="input_nickname" autocomplete="off" /><button type="submit"
-                id="join__button">参加する</button>
+            ニックネーム :
+            <br class="br-m">
+            <input type="text" id="input_nickname" autocomplete="off" />
+            <br class="br-m">
+            <button type="submit" id="join__button">参加する</button>
         </form>
     </div>
     <header>
-        <h1>QTalk</h1>
+        <div class="menu">
+            <h1>QTalk</h1>
+        </div>
     </header>
     <main>
         <div id="wrapper">
@@ -35,11 +40,13 @@
 
                 <div id="image">
                     <h2 id="image__title">画像</h2>
-                    <input type="file" name="inpFile" id="inpFile" onchange="fileload()">
-                    <div class="image-preview" id="imagePreview">
-                        <img src="" alt="Image Preview" class="image-preview__image">
-                        <span class="image-preview__default-text">Preview</span>
-                    </div>
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="file" name="inpFile" accept=".png,.jpg,.jpeg" id="inpFile" onchange="fileload()">
+                        <div class="image-preview" id="imagePreview">
+                            <img src="" alt="Image Preview" class="image-preview__image">
+                            <span class="image-preview__default-text">Preview</span>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -53,8 +60,8 @@
                 </div>
                 <ul id="chat__box"></ul>
                 <form id="chat__form" action="">
-                    <input type="text" id="chat__message" autocomplete="off" /><button type="submit"
-                        id="chat__button">送信</button>
+                    <input type="text" id="chat__message" autocomplete="off" /><button type="submit" id="chat__button"
+                        alt="送信">送信</button>
                 </form>
             </div>
         </div>
@@ -64,6 +71,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="client.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
