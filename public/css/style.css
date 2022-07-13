@@ -296,16 +296,25 @@ input {
     margin-top: 10px;
   }
   #lower-area {
-    display: none;
     float: none;
     width: 100%;
     margin: 0;
+  }
+  #image {
+    display: none;
+  }
+  #member__title {
+    display: none;
+  }
+  #member__list {
+    height: 30px;
+    margin: 5px 0;
   }
   #chat {
     width: 100%;
   }
   #chat__box {
-    height: 680px;
+    height: 640px;
   }
   #imagePreview {
     min-height: 20px;

@@ -337,10 +337,22 @@ input {
     }
 
     #lower-area {
-        display: none;
         float: none;
         width: 100%;
         margin: 0;
+    }
+
+    #image {
+        display: none;
+    }
+
+    #member__title {
+        display: none;
+    }
+
+    #member__list {
+        height: 30px;
+        margin: 5px 0;
     }
 
     #chat {
@@ -348,7 +360,7 @@ input {
     }
 
     #chat__box {
-        height: 680px;
+        height: 640px;
     }
 
     #imagePreview {
